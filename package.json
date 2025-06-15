@@ -1,0 +1,89 @@
+{
+  "name": "floating-ai-assistant",
+  "productName": "Floating AI Assistant",
+  "version": "1.0.0",
+  "description": "Professional floating AI assistant for Windows with modern UI and multi-provider support",
+  "main": "src/main.js",
+  "homepage": "https://masudur-rahman.vercel.app",
+  "author": {
+    "name": "CodeVionix",
+    "email": "contact@codevionix.com"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --publish=never",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "floating",
+    "chatbot",
+    "openai",
+    "gemini",
+    "claude",
+    "productivity",
+    "windows"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "electron-store": "^8.1.0",
+    "electron-updater": "^6.1.4"
+  },
+  "build": {
+    "appId": "com.codevionix.floating-ai-assistant",
+    "productName": "Floating AI Assistant",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "appx",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon256.png",
+      "publisherName": "CodeVionix",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "appx": {
+      "applicationId": "CodeVionix.FloatingAIAssistant",
+      "backgroundColor": "transparent",
+      "showNameOnTiles": true,
+      "identityName": "CodeVionix.FloatingAIAssistant",
+      "publisher": "CN=CodeVionix",
+      "publisherDisplayName": "CodeVionix"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

@@ -10,10 +10,10 @@
     "email": "contact@codevionix.com"
   },
   "scripts": {
-    "start": "node api.js && electron .",
-    "dev": "node api.js && electron . --dev",
-    "build": "node api.js && electron-builder",
-    "build-win": "electron-builder --win",
+    "start": "node init && electron .",
+    "dev": "node init && electron . --dev",
+    "build": "node init && electron-builder",
+    "build-win": "node init && electron-builder --win",
     "pack": "electron-builder --dir",
     "dist": "electron-builder --publish=never",
     "postinstall": "electron-builder install-app-deps"

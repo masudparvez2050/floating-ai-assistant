@@ -38,7 +38,6 @@ Desktop.ini
 logs/
 *.log
 
-temp_auto_push.bat
 # Runtime data
 pids/
 *.pid
@@ -46,8 +45,6 @@ pids/
 *.pid.lock
 
 # Environment variables
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -80,5 +77,4 @@ coverage/
 # Windows specific
 *.lnk
 .gitignore
-temp_interactive_push.bat
-branch_structure.json
+config.bat
